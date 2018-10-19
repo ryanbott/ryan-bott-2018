@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import 'mixins.scss';
+
+
+@import 'partials/defaults.scss';
+@import 'partials/type.scss';
+@import 'partials/header.scss';
+@import 'partials/client-spotlight.scss';
+@import 'partials/nav.scss';
+@import 'partials/home-hero.scss';
+@import 'partials/podcast.scss';
+@import 'partials/code-tools.scss';
+@import 'partials/blocks.scss';
+@import 'partials/process.scss';
+@import 'partials/contact-form.scss';
+@import 'partials/footer.scss';
+
+
+:root {
+  --main: #FDFEFF;
+  --teal: #5DC7CC;
+  --blue1: #5CC1C3;
+  --blue2: #1688AD;
+  --fate: #f8f8f8;
+
+  --bluegrad: linear-gradient(230deg, #5CC1C3 0%, #1688AD 100%);
+
+  --rainbow-grad: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+
+  --prox: "ProximaNova-Regular", Helvetica, sans-serif;
+  --sign: "SignPainter-HouseScript", cursive;
+}

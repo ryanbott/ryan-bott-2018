@@ -1,0 +1,111 @@
+.footer {
+  $self: &;
+
+  position: relative;
+  background: black;
+  padding: 0;
+
+  &:before {
+    content:"";
+    height:1px;
+    width:100%;
+    display:block;
+    /* left:50%; */
+    position:absolute;
+    background-image: var(--rainbow-grad);
+    transform: scaleY(-1);
+  }
+
+  .footer-top {
+    display: flex;
+    /* position: relative; */
+    flex-direction: row;
+    margin-bottom: 6rem;
+
+    & > *:before {
+      content:"";
+      width:1px;
+      height:100%;
+      display:block;
+      left:50%;
+      position:absolute;
+	    background-image: var(--rainbow-grad);
+  	}
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 50%;
+      flex-wrap: wrap;
+      padding: 0 3rem;
+      justify-content: space-around;
+    }
+
+    h4 {
+      @include body-large;
+
+      display: blocks;
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    .footer__column {
+      flex-basis: 50%;
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style: none;
+          margin-right: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: block;
+    position: relative;
+    padding: 1rem 0;
+
+    &__social {
+      display: flex;
+      flex-direction: row;
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: inline;
+          padding: 0 1em;
+
+          a {
+            @include body-font;
+
+            color: var(--fate);
+          }
+        }
+      }
+      .instagram {&:hover {color: #D6C9B5;}}
+      .dribbble {&:hover {color: #E44A87;}}
+      .behance {&:hover {color: #0057ff;}}
+      .twitter {&:hover {color: #4099ff;}}
+      .500px {&:hover {color: #d3d3d3;}}
+    }
+  }
+
+  .header-logo {
+    right: 0;
+    transform: translateY(-100%);
+  }
+  .copyright {
+    position: absolute;
+    color: #939393;
+    font-size: .75rem;
+    right: 1rem;
+    bottom: .5rem;
+  }
+}

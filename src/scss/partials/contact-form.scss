@@ -1,0 +1,59 @@
+.contact-form {
+  text-align: left;
+  width: 70%;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+
+  form {
+    padding-bottom: 4em;
+
+    input[type="text"],
+    input[type="email"],
+    textarea[type="text"] {
+      @include body-font;
+
+      background-color: #2d2d2d;
+      color: white;
+      padding: .8rem 1em;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid var(--teal);
+      margin-bottom: 1em;
+      &:focus { outline: var(--teal) auto 2px; }
+      &:invalid { border-bottom: 2px solid #fb0202; }
+      &::placeholder {
+        color: var(--fate);
+      }
+    }
+
+    textarea {
+      min-height: 10rem;
+    }
+
+    button {
+      @include body-font;
+
+      cursor: pointer;
+      float: left;
+
+      background: var(--rainbow-grad);
+      background-size: 400% 200%;
+      color: white;
+      padding: 1em 1.25em;
+      margin: 1em;
+      border: 0;
+      border-radius: 0;
+
+      &:hover {
+        color: #f2f2f2;
+        animation: animatedgradient .5s ease forwards;
+      }
+    }
+  }
+
+  .buttons {
+    text-align: left;
+  }
+}
+
+@include button-animation;

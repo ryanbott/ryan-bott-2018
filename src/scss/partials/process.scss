@@ -1,0 +1,29 @@
+.process {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 0;
+  margin: auto;
+  border: 2px solid white;
+
+  &__item {
+    display: flex;
+    width: 30%;
+    bottom: 3%;
+    flex-direction: row;
+    margin: 0 .5rem 3rem;
+
+    &--number {
+      @include hero-large;
+
+      font-size: 4rem;
+      letter-spacing: .24rem;
+      margin-right: .8rem;
+    }
+
+    &--text {
+      @include body-font;
+    }
+  }
+}

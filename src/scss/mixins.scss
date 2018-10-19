@@ -1,0 +1,61 @@
+@mixin bg-red {
+  background-color: black;
+}
+
+@mixin body-large {
+  font-family: "Proxima Nova";
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 4.37px;
+}
+
+@mixin body-font {
+  font-family: "Proxima Nova";
+  font-size: 1.25rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  color: white;
+}
+
+@mixin hero-large {
+  font-family: var(--prox);
+  display: block;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+
+@mixin script-font {
+  font-family: var(--sign);
+  color: white;
+}
+
+
+@mixin animation {
+  @keyframes animatedgradient {
+  	0% {
+  		background-position: 0% 50%;
+  	}
+  	50% {
+  		background-position: 100% 50%;
+  	}
+  	100% {
+  		background-position: 0% 50%;
+  	}
+  }
+}
+
+@mixin button-animation {
+  @keyframes animatedgradient {
+  	from {
+  		background-position: 0% 50%;
+  	}
+  	to {
+  		background-position: 100% 50%;
+  	}
+  }
+}

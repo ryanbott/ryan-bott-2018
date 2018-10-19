@@ -1,0 +1,62 @@
+.home-hero {
+  position: relative;
+  /* background: url("../img/bg/ryan-bw.jpg"); */
+  /* background-image: url("../img/bg/ryan-bw.jpg"); */
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+  background-color: black;
+  height: 100vh;
+  max-height: 50rem;
+
+  &__text {
+    position: absolute;
+    width: fit-content;
+    top: 20%;
+    left: 4%;
+
+    h1 {
+      font-size: 2rem;
+      color: white;
+      letter-spacing: .25rem;
+      /* font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1440 - 320))); */
+    }
+
+    &--lead {
+      @include script-font;
+
+      letter-spacing: 4px;
+      text-transform: lowercase;
+    }
+
+    &--flair {
+      @include script-font;
+
+      position: absolute;
+      font-size: 2rem;
+      top: 13%;
+      left: -6%;
+      letter-spacing: 4px;
+      text-transform: lowercase;
+      /* margin-right: -100%; */
+    }
+
+    &--main {
+      @include hero-large;
+
+      position: relative;
+      padding-top: .75rem;
+    }
+
+    &--attribute {
+      display: flex;
+      justify-content: flex-end;
+      font-family: var(--prox);
+      font-size: .875rem;
+      color: white;
+      letter-spacing: 1.7px;
+      text-align: right;
+      margin-right: 1rem;
+    }
+  }
+}

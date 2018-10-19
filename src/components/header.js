@@ -1,33 +1,39 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
+
+const MainNav = [
+  {
+    name: 'About',
+    link: '/about'
+  },{
+    name: 'Gear',
+    link: '/gear'
+  },{
+    name: 'Web Dev',
+    link: '/work'
+  },{
+    name: 'Shop',
+    link: '/shop'
+  },
+]
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header id="header" className="header">
+    <div className="header-logo">
+      <a href="/" aria-label="Return to Ryan Bott's homepage">r.b</a>
     </div>
-  </div>
+    <div>
+      <nav className="nav">
+        <ul>
+          {MainNav.map(link => (
+            <li key={link.name}>
+              <a href={link.link} className={link.name.toLowerCase()}  alt={link.name}>{link.name}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+	</header>
 )
 
 export default Header

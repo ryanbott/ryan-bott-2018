@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'prox';
+  src:  url('/src/fonts/ProximaNova-Regular.woff2') format('woff2'),
+  url('/src/fonts/ProximaNova-Regular.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'sign';
+  src:  url('/src/fonts/SignPainter-HouseScript.woff2') format('woff2'),
+  url('/src/fonts/SignPainter-HouseScript.woff') format('woff')
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: var(--prox);
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.4;
+  margin: 0;
+}

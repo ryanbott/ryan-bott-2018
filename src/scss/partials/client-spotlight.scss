@@ -1,0 +1,43 @@
+.client-spotlight {
+  background-color: #222;
+
+  &__title {
+    @include body-large;
+
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+
+    p {
+      @include body-font;
+    }
+  }
+
+  &__featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 1rem;
+    grid-auto-rows: 7.25rem;
+    grid-auto-flow: dense;
+    margin-top: 1rem;
+  }
+
+  &__logo {
+    background: blue;
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  &__list {
+    ul {
+      padding: 0;
+
+      li {
+        text-align: center;
+        line-height: 1.8rem;
+        list-style: none;
+        margin: auto;
+      }
+    }
+  }
+}
