@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
         <Header/>
 
         <div>
-          {children()}
+          {children}
         </div>
         <Footer/>
       </div>
